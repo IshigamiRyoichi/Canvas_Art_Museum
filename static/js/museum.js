@@ -183,12 +183,10 @@ function firefly_art(){
   let canvas = document.getElementById('firefly');
   let ctx = canvas.getContext('2d');
   
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  // canvas.width = window.innerWidth;
+  // canvas.height = window.innerHeight;
   
   window.addEventListener('resize', function() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
     ctx = canvas.getContext('2d');
     ctx.globalCompositeOperation = 'lighter';
   });
@@ -200,7 +198,7 @@ function firefly_art(){
   ];
   let count = 70;
   let blur = [ 12, 70 ];
-  let radius = [ 1, 120 ];
+  let radius = [ 1, 40 ];
   
   ctx.clearRect( 0, 0, canvas.width, canvas.height );
   ctx.globalCompositeOperation = 'lighter';
